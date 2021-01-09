@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <!-- <head>
+        <title>ToDo</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <h1>Content will go here</h1>
+    </body> -->
+
+    <!-- <head>
+        <title>ToDo</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body class="m-a-1">
+        <h3 class="bg-primary p-a-1">Adam's To Do List</h3>
+        
+        <div class="m-t-1 m-b-1">
+            <input class="form-control" />
+            <button class="btn btn-primary m-t-1">Add</button>
+        </div>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Buy Flowers</td><td>No</td></tr>
+                <tr><td>Get Shoes</td><td>No</td></tr>
+                <tr><td>Collect Tickets</td><td>Yes</td></tr>
+                <tr><td>Call Joe</td><td>No</td></tr>
+            </tbody>
+        </table>
+    </body> -->
+
+    <head>
+        <title>ToDo</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+        <script src="node_modules/classlist.js/classList.min.js"></script>
+        <script src="node_modules/core-js/client/shim.min.js"></script>
+        <script src="node_modules/zone.js/dist/zone.min.js"></script>
+        <script src="node_modules/reflect-metadata/Reflect.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script>
+            var paths = {
+                "rxjs/*": "node_modules/rxjs/bundles/Rx.min.js",
+                "@angular/*": "node_modules/@angular/*"
+            }
+            var packages = { "app": {} };
+            var angularModules = ["common", "compiler", "core", "forms", "platform-browser", "platform-browser-dynamic"];
+            angularModules.forEach(function(pkg) {
+                packages["@angular/" + pkg] = {
+                    main: "/bundles/" + pkg + ".umd.min.js"
+                };
+            });
+            System.config({paths: paths, packages: packages});
+            System.import("app/main").catch(function(err){console.error(err);});
+        </script>
+    </head>
+    <body class="m-a-1">
+        <todo-app>Angular placeholder</todo-app>
+    </body>
+</html>

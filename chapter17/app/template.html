@@ -1,0 +1,10 @@
+<div class="col-xs-4 p-a-1">
+    <!-- Form will go here -->
+    <paProductForm (paNewProduct)="addProduct($event)"></paProductForm>
+</div>
+<div class="col-xs-8 p-a-1">
+    <!-- Table will go here -->
+    <paToggleView>
+        <paProductTable [model]="model"></paProductTable>
+    </paToggleView>
+</div>
